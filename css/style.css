@@ -307,22 +307,22 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 3rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 2.5rem; }
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 2rem; }
 
 h4, .h4 {
-  font-size: 1.5rem; }
+  font-size: 1.75rem; }
 
 h5, .h5 {
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 h6, .h6 {
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 .lead {
   font-size: 1.25rem;
@@ -8134,11 +8134,11 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.8;
   font-weight: normal;
   background: #fafafa;
-  color: gray; }
+  color: black; }
 
 a {
   -webkit-transition: .3s all ease;
@@ -8234,9 +8234,9 @@ h1, h2, h3, h4, h5,
   #sidebar ul li {
     font-size: 16px; }
     #sidebar ul li > ul {
-      margin-left: 10px; }
+      margin-left: 14px; }
       #sidebar ul li > ul li {
-        font-size: 14px; }
+        font-size: 16px; }
     #sidebar ul li a {
       padding: 10px 0;
       display: block;
