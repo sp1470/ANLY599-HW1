@@ -93,12 +93,19 @@
         
         <section id='introduction'>
           <h3 class="mb-4" >Introduction</h3>
-          <p>University application is an important process for every students who want to get admitted. Universities require a lot of information in applications including personal information of applicants, academic performance, wokring experience and etc. Each university places different emphasis on each factor. In the current time, university applications become more and more competitive, so understanding what factors the university cares about is very important for successful applications. <strong>Our project analyzes factors that may influence admission decisions to help both universities and applicants.</strong></p>
+          <p>University application is an important process for every students who want to get admitted. Universities require a lot of information in applications such as personal information of applicants, academic performance, wokring experience and etc. Each university places different emphasis on each factor. Some universities consider the academic performance as the most important quality and some universities focus on comprehensive skills. In the current time, university applications especially for graduate shcools become more and more competitive, so understanding what factors the university cares about is very important for successful applications. <strong>Our project analyzes factors that may influence admission decisions using summer admission data of a univeristy.</strong> We think our analysis can help both the university and applicants. For the univeristy, they can understand if there is any bias in admission process. For applicants, they can understand what quality the university is looking for.</p>
         </section>
         <br><br>
         
         <section id='data_cleaning'>
           <h3 class="mb-4" >Data Cleaning</h3>
+          <p>The original data is synthesized, so it doesn't represent any real situations. In our analysis, we assume the data is collected from the admission office. It contains 88 admission results and applicants' information, including</p>
+          <p>
+            &emsp;<strong>Decision:</strong> admission decision (Admit, Waitlist or Decline)
+            <br>&emsp;<strong>State:</strong> state for applicants
+            <br>&emsp;<strong>WorkExp:</strong> working experience measured in years
+            <br>
+          </p>
         </section>
         <br>
         
@@ -106,8 +113,12 @@
           <h3 class="mb-4" >Factor Analysis</h3>
           
           <section id='volunteer_level'>
-            <h4 class="mb-4" >Volunteer Level</h4>
-            <p>Text here</p>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="mb-4" >1. Volunteer Level</h4>
+                <p class="card-text">Extracurricular activities is an important part in university applications. These activities can demonstrate applicants' interest and knowledge beyond the regular coursework. The admission office can understand applicants' personality and comprehensive skills through extracurricular activities. Although almost all universities require such activities, they place different emphasis on activities. In this section, we use volunteer level as an example of extracurricular activities to analyze how it affects admission decisions in the university.</p>
+              </div>
+            </div>
             <iframe src="./plots/volunteer_level.html" frameborder="0" width="100%" height="450"></iframe>
             <div style="text-align: center; color: black" ><strong>Figure 1. &nbsp Number of Volunteer Levels by Admission Decision</strong></div>
           </section>
