@@ -93,21 +93,72 @@
         
         <section id='introduction'>
           <h3 class="mb-4" >Introduction</h3>
-          <p>University application is an important process for every students who want to get admitted. Universities require a lot of information in applications such as personal information of applicants, academic performance, wokring experience and etc. Each university places different emphasis on each factor. Some universities consider the academic performance as the most important quality and some universities focus on comprehensive skills. In the current time, university applications especially for graduate shcools become more and more competitive, so understanding what factors the university cares about is very important for successful applications. <strong>Our project analyzes factors that may influence admission decisions using summer admission data of a univeristy.</strong> We think our analysis can help both the university and applicants. For the univeristy, they can understand if there is any bias in admission process. For applicants, they can understand what quality the university is looking for.</p>
+          <p>University application is an important process for every students who want to get admitted. Universities require a lot of information in applications such as personal information of applicants, academic performance, wokring experience and etc. Each university places different emphasis on each factor. Some universities consider the academic performance as the most important quality and some universities focus on comprehensive skills. In the current time, university applications especially for graduate shcools become more and more competitive, so understanding what factors the university cares about is very important for successful applications. <strong>The goal of our project is to analyze factors that may influence admission decisions using summer admission data of a univeristy.</strong> We think our analysis can help both the university and applicants. For the univeristy, they can understand if there is any bias in admission process. For applicants, they can understand what quality the university is looking for.</p>
         </section>
         <br><br>
         
         <section id='data_cleaning'>
           <h3 class="mb-4" >Data Cleaning</h3>
-          <p>The original data is synthesized, so it doesn't represent any real situations. In our analysis, we assume the data is collected from the admission office. It contains 88 admission results and applicants' information, including</p>
+          <p>The original data is synthesized, so it doesn't represent any real situations. In our analysis, we assume the data is collected from the admission office. It contains 88 admission results and applicants' information in 8 features, including</p>
           <p>
             &emsp;<strong>Decision:</strong> admission decision (Admit, Waitlist or Decline)
             <br>&emsp;<strong>State:</strong> state for applicants
+            <br>&emsp;<strong>GPA:</strong> grade point average on a 4.0 scale
             <br>&emsp;<strong>WorkExp:</strong> working experience measured in years
+            <br>&emsp;<strong>TestScore:</strong> test score on a 1000 scale
+            <br>&emsp;<strong>WritingScore:</strong> writing score on a 100 scale
+            <br>&emsp;<strong>Gender:</strong> gender of the applicant (0 or 1)
+            <br>&emsp;<strong>Volunteer:</strong> measure how many volunteer work the applicant done (0 to 5)
             <br>
           </p>
+          <div style="text-align: center">
+            <img align="center" src="./plots/original_data.png" width="700px">
+          </div>
+          <div style="text-align: center; color: black" ><strong>First 5 rows of the original data</strong></div>
+          <br>
+          <h4 class="mb-4" >Missing Values</h4>
+          <table width=100%>
+          <tbody>
+            <tr>
+              <td>
+                <p width="100px">The dataset contains 5 missing values. The Decision column has one missing value; GPA has 1; Testscore has 1; Gender has 2. Missing values in quantitative data including GPA and Testscore are filled with the mean of the corresponding column. Missing values in qualatative data including Decision and Gender are filled with the mode of the corresponding column.</p>
+            </td>
+              <td>
+                <div style="text-align: center"><img src="./plots/missing_values.png" width="250px"></div>
+                <div style="text-align: center; color: black" ><strong>Number of missing values in each feature</strong></div>
+            </td>
+          </tr>
+      </tbody></table>
+      <br>
+      <h4 class="mb-4" >Error Values</h4>
+      
+      <h5 class="mb-4" >Decision</h5>
+      <p>
+        One applicant has decision of "Banna". This is an obvious error values. This applicant has high GPA, test score and writing score, so we guess the applicant is likely to be admiited. Thus, we change the "Banna" to "Admit".
+      </p>
+      <div style="text-align: center">
+            <img align="center" src="./plots/decision_error.png" width="700px">
+          </div>
+          <div style="text-align: center; color: black" ><strong>Error values in Decision</strong></div>
         </section>
-        <br>
+        
+      <h5 class="mb-4" >State</h5>
+      <p>Some state names are in lower case in the original data. We capitalize the first letter of all states.</p>
+      
+      <h5 class="mb-4" >GPA</h5>
+      <p>The 4.0 GPA scale should have values between 0.0 and 4.0. One applicant has GPA of 6.0 which is outside the normal range. We use the mean of GPA to replace this error value.</p>
+      <div style="text-align: center">
+            <img align="center" src="./plots/gpa_error.png" width="700px">
+          </div>
+          <div style="text-align: center; color: black" ><strong>Error values in GPA</strong></div>
+          
+      <h5 class="mb-4" >WorkExp</h5>
+      <p>One applicant has 100 years work experience which is obviously impossible. We use the mean of WorkExp to replace this error value.</p>
+      <div style="text-align: center">
+            <img align="center" src="./plots/workexp_error.png" width="700px">
+          </div>
+          <div style="text-align: center; color: black" ><strong>Error values in WorkExp</strong></div>
+        <br><br>
         
         <section id='analysis'>
           <h3 class="mb-4" >Factor Analysis</h3>
