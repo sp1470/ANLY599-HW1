@@ -114,7 +114,7 @@
           <div style="text-align: center">
             <img align="center" src="./plots/original_data.png" width="700px">
           </div>
-          <div style="text-align: center; color: black" ><strong>First 5 rows of the original data</strong></div>
+          <div style="text-align: center; color: black" ><strong>The top 5 rows of the original data</strong></div>
           <br>
           <h4 class="mb-4" >Missing Values</h4>
           <table width=100%>
@@ -158,6 +158,21 @@
             <img align="center" src="./plots/workexp_error.png" width="700px">
           </div>
           <div style="text-align: center; color: black" ><strong>Error values in WorkExp</strong></div>
+          
+      <h5 class="mb-4" >Gender</h5>
+      <p>
+        One applicant has gender of -1 while the gender should only has 0 or 1. We use the mode of Gender to replace this error value.
+      </p>
+      <div style="text-align: center">
+            <img align="center" src="./plots/gender_error.png" width="700px">
+          </div>
+          <div style="text-align: center; color: black" ><strong>Error values in Gender</strong></div>
+      <p>Other features including TestScore, WritingScore and VolunteerLevel has no error values. After dealing missing values and correcting error values, the data looks like the following.</p>
+      <div style="text-align: center">
+            <img align="center" src="./plots/data_clean.png" width="700px">
+          </div>
+          <div style="text-align: center; color: black" ><strong>The top 5 rows of clean data</strong></div>
+      
         <br><br>
         
         <section id='analysis'>
@@ -175,19 +190,7 @@
           </section>
         </section>
         
-        <p></p>
-        <table width=100%>
-          <tbody><tr>
-              <td>
-                <div style="text-align: center"><img src="./eda_picture/charizard.png" width="350px"></div>
-                <div style="text-align: center; color: black" ><strong>Charizard Pokémon (source: <a href="https://sonic-pokemon-unipedia.fandom.com/wiki/Charizard">Sonic Pokémon Uni-Pedia Wiki</a>)</strong></div>
-            </td>
-              <td>
-                <div style="text-align: center"><img src="./eda_picture/Sylveon_VMAX.png" width="300px"></div>
-                <div style="text-align: center; color: black" ><strong>Sylveon trading card (source: <a href="https://www.tcgplayer.com/product/246704/pokemon-swsh07-evolving-skies-sylveon-vmax-alternate-art-secret?xid=pi952d295e-3a63-403b-8b4b-3cd7ca833b0f&Language=English">TCGplayer</a>)</strong></div>
-            </td>
-          </tr>
-      </tbody></table>
+        <p>The visulization shows number of volunteer levels by admission. The number of each volunteer level is similar for admitted applicants. <strong>This means the university attempts to keep volunteer level balanced. We think the university has no preference for a specific volunteer level.</strong> However, this doesn't mean the admission rate is the same for every volunteer level. For example, 50% of applicants with volunteer level 0 are admitted, but only 1/3 of applicants with volunteer level 1 are admitted. This difference is caused by the gap between the number of volunteer level 0 and 1. The volunteer level 0 has 12 applicants and level 1 has 18. To keep volunteer level balanced, the university has to decline more applicants with level 1. The minority level should has higher admission rate than the majority level. However, this conclusion is useless for applicants because they have no information about the volunteer level distribution for all applicants, so they don't know if thy are in the minority level.</p>
         </div>
 		</div>
 
