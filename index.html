@@ -27,7 +27,8 @@
               <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Factor Analysis</a>
               <ul class="list-unstyled collapse show" id="homeSubmenu" style>
                 <li><a href="#volunteer_level">Volunteer Level</a></li>
-                <li><a href="">State</a></li>
+                <li><a href="#state">State</a></li>
+                <li><a href="#workexp">Work Experience</a></li>
                 <li><a href="">Academic Performance</a></li>
               </ul>
             </li>
@@ -93,7 +94,7 @@
         
         <section id='introduction'>
           <h3 class="mb-4" >Introduction</h3>
-          <p>University application is an important process for every students who want to get admitted. Universities require a lot of information in applications such as personal information of applicants, academic performance, wokring experience and etc. Each university places different emphasis on each factor. Some universities consider the academic performance as the most important quality and some universities focus on comprehensive skills. In the current time, university application especialy for graduate school becomes more and more competitive which makes finding out qualified applicants difficult. Thus, understanding what factors the university cares about become very important for determning appropriate applicants. <strong>The goal of our project is to analyze factors that may influence admission decisions using summer admission data of a univeristy.</strong> We think our analysis can help  the university in two aspects. First, the admission offfice can understand if there is any bias in admission process. Second, the university can understand what quality they are looking for.</p>
+          <p>University application is an important process for every students who want to get admitted. Universities require a lot of information in applications such as personal information of applicants, academic performance, wokring experience and etc. Each university places different emphasis on each factor. Some universities consider the academic performance as the most important quality and some universities focus on comprehensive skills. In the current time, university application especialy for graduate school becomes more and more competitive which makes finding out qualified applicants difficult. Thus, understanding what factors the university cares about become very important for determining appropriate applicants. <strong>The goal of our project is to analyze factors that may influence admission decisions using summer admission data of a univeristy.</strong> We think our analysis can help the university in two aspects. First, the admission offfice can understand if there is any bias in admission process. Second, the university can have a clear understanding about quality they are searching for applicants.</p>
         </section>
         <br><br>
         
@@ -177,20 +178,53 @@
         
         <section id='analysis'>
           <h3 class="mb-4" >Factor Analysis</h3>
-          
-          <section id='volunteer_level'>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="mb-4" >1. Volunteer Level</h4>
-                <p class="card-text">Extracurricular activities is an important part in university applications. These activities can demonstrate applicants' interest and knowledge beyond the regular coursework. The admission office can understand applicants' personality and comprehensive skills through extracurricular activities. Although almost all universities require such activities, they place different emphasis on activities. In this section, we use volunteer level as an example of extracurricular activities to analyze how it affects admission decisions in the university.</p>
-              </div>
-            </div>
-            <iframe src="./plots/volunteer_level.html" frameborder="0" width="100%" height="450"></iframe>
-            <div style="text-align: center; color: black" ><strong>Figure 1. &nbsp Number of Volunteer Levels by Admission Decision</strong></div>
-          </section>
         </section>
+          
+        <section id='volunteer_level'>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="mb-4" >1. Volunteer Level</h4>
+              <p class="card-text">Extracurricular activities is an important part in university applications. These activities can demonstrate applicants' interest and knowledge beyond the regular coursework. The admission office can understand applicants' personality and comprehensive skills through extracurricular activities. Although almost all universities require such activities, they place different emphasis on activities. In this section, we use volunteer level as an example of extracurricular activities to analyze how it affects admission decisions in the university.</p>
+            </div>
+          </div>
+        </section>
+        <iframe src="./plots/volunteer_level.html" frameborder="0" width="100%" height="450"></iframe>
+        <div style="text-align: center; color: black" ><strong>Figure 1. Number of volunteer levels by admission decision</strong></div>
         
         <p>The visulization shows number of volunteer levels by admission. The number of each volunteer level is similar for admitted applicants. <strong>This means the university attempts to keep volunteer level balanced. We think the university has no preference for a specific volunteer level.</strong> However, this doesn't mean the admission rate is the same for every volunteer level. For example, 50% of applicants with volunteer level 0 are admitted, but only 1/3 of applicants with volunteer level 1 are admitted. This difference is caused by the gap between the number of volunteer level 0 and 1. The volunteer level 0 has 12 applicants and level 1 has 18. To keep volunteer level balanced, the university has to decline more applicants with level 1. The minority level should has higher admission rate than the majority level. However, this conclusion is useless for applicants because they have no information about the volunteer level distribution for all applicants, so they don't know if thy are in the minority level.</p>
+        
+        <br>
+        <section id='state'>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="mb-4" >2. State</h4>
+              <p class="card-text">In this section, we want to determine if the state bias exists in the admission process. We analyze admission rates for each state to study if admission decisions are influenced by state.</p>
+            </div>
+          </div>
+        </section>
+        <iframe src="./plots/state.html" frameborder="0" width="100%" height="450"></iframe>
+        <div style="text-align: center; color: black" ><strong>Figure 2. Percentage of students admitted, declined or in waitlist for each state</strong></div>
+        <p>
+          From the plot above, we can visualize that california has the highest number of student acceptances while Mississipi has the lowest. It is worth mentioning that in some students from New York, Georgia, Vermont, Oregon and etc only have one student that applied to college therefore some students were either rejected or waitlisted. <strong>Therefore, we cannot make a definitive statement about whether states affect admission rates, because many states have very few applicants.</strong>
+        </p>
+        
+        <br>
+        <section id='workexp'>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="mb-4" >3. Work Experience</h4>
+              <p class="card-text">In this section, we investigate how work experience affects admission decisions by analyzing the average work experience by states and admission decisions.</p>
+            </div>
+          </div>
+        </section>
+        <iframe src="./plots/workexp.html" frameborder="0" width="100%" height="450"></iframe>
+        <div style="text-align: center; color: black" ><strong>Figure 3. Student work experience by state and admission decision</strong></div>
+        <p>
+          This plot shows how an applicant's work experience and state can influence their admission decision. As seen in the plot, some states such as California have more applicants than other states due to the lack of applicants from certain states. By analyzing the admitted students, we can observe that students from California with 2.86 years of work experience were accepted followed up by Florida whose students had 1.6 years of work expereince, colorado students who had 1.46 years of work experience, and finally Utah students with 1.2 years of worth of experience. For waitlisted students, applicants from Florida with 2.52 years of work experience are waitlisted followed up with students from California and Colorado with nearly 1.88 years of work experience and Utah with 1.37 years of experience.
+        </p>
+        <p>
+          <strong>To conclude, We can't say that a person with more work experience has a higher chance of getting admitted.</strong> Multiple factors are taken before a student gets admitted. For example, a student from Mississippi who has 6.2 years of work experience was rejected but this could be the applicant not satisfying other criterias such as GPA/Test score.
+        </p>
         </div>
 		</div>
 
