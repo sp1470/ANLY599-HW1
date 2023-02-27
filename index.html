@@ -16,7 +16,7 @@
 			<nav id="sidebar">
 				<div class="p-4 pt-5">
 		  		<p style="font-size:20px">ANLY 599 Homework 1</p>
-          <p>Group Member: Ahmed Khair, Prakhar Maheshwari, Juzer Poonawala, Shide Pu</p>
+          <p>Group Member: Ahmed Khair, Juzer Poonawala, Shide Pu</p>
           <div style="position: fixed;">
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active"><a href="#home">Home &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a></li>
@@ -27,13 +27,13 @@
               <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Factor Analysis</a>
               <ul class="list-unstyled collapse show" id="homeSubmenu" style>
                 <li><a href="#volunteer_level">Volunteer Level</a></li>
+                <li><a href="#academic">Academic Performance</a></li>
                 <li><a href="#state">State</a></li>
                 <li><a href="#workexp">Work Experience</a></li>
-                <li><a href="">Academic Performance</a></li>
                 <li><a href="#gender">Gender</a></li>
               </ul>
             </li>
-	          <li><a href="">Conclusion</a></li>
+	          <li><a href="#conclusion">Conclusion</a></li>
 	        </ul></div>
 
 	        <div class="footer">
@@ -195,10 +195,27 @@
         <p>The visulization shows number of volunteer levels by admission. The number of each volunteer level is similar for admitted applicants. <strong>This means the university attempts to keep volunteer level balanced. We think the university has no preference for a specific volunteer level.</strong> However, this doesn't mean the admission rate is the same for every volunteer level. For example, 50% of applicants with volunteer level 0 are admitted, but only 1/3 of applicants with volunteer level 1 are admitted. This difference is caused by the gap between the number of volunteer level 0 and 1. The volunteer level 0 has 12 applicants and level 1 has 18. To keep volunteer level balanced, the university has to decline more applicants with level 1. The minority level should has higher admission rate than the majority level. However, this conclusion is useless for applicants because they have no information about the volunteer level distribution for all applicants, so they don't know if thy are in the minority level.</p>
         
         <br>
+        <section id='academic'>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="mb-4" >2. Academic Performance</h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </section>
+        <iframe src="./plots/gpa_test.html" frameborder="0" width="100%" height="550"></iframe>
+        <div style="text-align: center; color: black" ><strong>Figure 2. Distribution of GPA and test score by admission</strong></div>
+        
+        <p>Explanation goes here</p>
+        
+        <iframe src="./plots/writing.html" frameborder="0" width="100%" height="550"></iframe>
+        <p>Explanation goes here</p>
+        
+        <br>
         <section id='state'>
           <div class="card">
             <div class="card-body">
-              <h4 class="mb-4" >2. State</h4>
+              <h4 class="mb-4" >3. State</h4>
               <p class="card-text">In this section, we want to determine if the state bias exists in the admission process. We analyze admission rates for each state to study if admission decisions are influenced by state.</p>
             </div>
           </div>
@@ -247,6 +264,11 @@
         <p>
           We see the distribituion of gender among different states. Florida leads the count followed by Colorado and California. Most of the other states just had 1 applicant with the exception of Utah and Virginia.
         </p>
+        
+        <br><br>
+        <section id="conclusion">
+          <h3 class="mb-4" >Conclusion</h3>
+        </section>
         </div>
 		</div>
 
