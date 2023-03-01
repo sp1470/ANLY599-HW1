@@ -95,7 +95,7 @@
         
         <section id='introduction'>
           <h3 class="mb-4" >Introduction</h3>
-          <p>University application is an important process for every students who want to get admitted. Universities require a lot of information in applications such as personal information of applicants, academic performance, wokring experience and etc. Each university places different emphasis on each factor. Some universities consider the academic performance as the most important quality and some universities focus on comprehensive skills. In the current time, university application especialy for graduate school becomes more and more competitive which makes finding out qualified applicants difficult. Thus, understanding what factors the university cares about become very important for determining appropriate applicants. <strong>The goal of our project is to analyze factors that may influence admission decisions using summer admission data of a univeristy.</strong> We think our analysis can help the university in two aspects. First, the admission offfice can understand if there is any bias in admission process. Second, the university can have a clear understanding about quality they are searching for applicants.</p>
+          <p>University application is an important process for every students who want to get admitted. Universities require a lot of information in applications such as personal information of applicants, academic performance, wokring experience and etc. Each university places different emphasis on each factor. Some universities consider the academic performance as the most important quality and some universities focus on comprehensive skills. In the current time, competitions between universities become more and more intense which brings a lot of pressure to admission offices. Thus, understanding what factors the university cares about become very important for attracting applicants. <strong>The goal of our project is to analyze factors that may influence admission decisions using summer admission data of a univeristy. We will make strategies to attract more students to apply to the university which increases the number of applications.</strong></p>
         </section>
         <br><br>
         
@@ -180,7 +180,14 @@
         <section id='analysis'>
           <h3 class="mb-4" >Factor Analysis</h3>
         </section>
-          
+          <p>The following square area graph shows the proportions of decisions in the data. The admit rate is 35% whereas the decline/waitlist are nearly equal. Therefore, we recommend the university to increase more admit rate by decreasing waitlist percentage. In the following sections, we analyze how different factors influence admission decisions.
+</p>
+          <div style="text-align: center">
+            <img align="center" src="./plots/decision_percentage.png" width="700px">
+          </div>
+          <div style="text-align: center; color: black" ><strong>Figure 1. Proportions of decisions</strong></div>
+        
+        <br>
         <section id='volunteer_level'>
           <div class="card">
             <div class="card-body">
@@ -190,7 +197,7 @@
           </div>
         </section>
         <iframe src="./plots/volunteer_level.html" frameborder="0" width="100%" height="450"></iframe>
-        <div style="text-align: center; color: black" ><strong>Figure 1. Number of volunteer levels by admission decision</strong></div>
+        <div style="text-align: center; color: black" ><strong>Figure 2. Number of volunteer levels by admission decision</strong></div>
         
         <p>The visulization shows number of volunteer levels by admission. The number of each volunteer level is similar for admitted applicants. <strong>This means the university attempts to keep volunteer level balanced. We think the university has no preference for a specific volunteer level.</strong> However, this doesn't mean the admission rate is the same for every volunteer level. For example, 50% of applicants with volunteer level 0 are admitted, but only 1/3 of applicants with volunteer level 1 are admitted. This difference is caused by the gap between the number of volunteer level 0 and 1. The volunteer level 0 has 12 applicants and level 1 has 18. To keep volunteer level balanced, the university has to decline more applicants with level 1. The minority level should has higher admission rate than the majority level. However, this conclusion is useless for applicants because they have no information about the volunteer level distribution for all applicants, so they don't know if thy are in the minority level.</p>
         
@@ -204,12 +211,12 @@
           </div>
         </section>
         <iframe src="./plots/gpa_test.html" frameborder="0" width="100%" height="550"></iframe>
-        <div style="text-align: center; color: black" ><strong>Figure 2. Distribution of GPA and test score by admission</strong></div>
+        <div style="text-align: center; color: black" ><strong>Figure 3. Distribution of GPA and test score by admission</strong></div>
         
         <p>The distribution of GPA by admission displays a very obvious pattern that the admitted applicants have higher GPA than waitlisted and declined applicants. The median GPA of the admitted applicants is 3.77 which is higher than 3.5 of the waitlisted and 3.27 of the declined. The minimum GPA of the admitted applicants is 3.5 which means the university doesn't admit students who have GPA lower than 3.5. The distribution of test score also shows that the admitted applicants have higher test scores than other applicants. All applicants who have test score higher than 900 are admitted and most of admitted applicants are above 950. However, there are two admitted applicants who have relatively low test score. Maybe, their other factors are very good which make up for their low test scores. <strong>Based on these boxplots, we can conclude that the university has strong preference for students having high GPA and test scores.</strong></p>
         
         <iframe src="./plots/writing.html" frameborder="0" width="100%" height="550"></iframe>
-        <div style="text-align: center; color: black" ><strong>Figure 3. Distribution of writing score by admission</strong></div>
+        <div style="text-align: center; color: black" ><strong>Figure 4. Distribution of writing score by admission</strong></div>
         <p><strong>In the boxplot above, we can visualize that a student who scores higher than 87 has a higher chance of being admitted.</strong> We can also say that a student who scores between 71 and 85 has a high chance of being waitlisted. On the other hand, a student who scores less than 70 is more likely to be rejected. It's worth mentioning that other factors could affect one's admission decision. For example, some students with scores higher than 85% were still waitlisted or rejected. As for outliers, there are a few in the admitted student group, as some students with a writing score of 1 or 11 were still admitted. This is quite abnormal and I would suggest the university to investigate these outliers.</p>
         
         <br>
@@ -222,7 +229,7 @@
           </div>
         </section>
         <iframe src="./plots/state.html" frameborder="0" width="100%" height="450"></iframe>
-        <div style="text-align: center; color: black" ><strong>Figure 4. Percentage of students admitted, declined or in waitlist for each state</strong></div>
+        <div style="text-align: center; color: black" ><strong>Figure 5. Percentage of students admitted, declined or in waitlist for each state</strong></div>
         <p>
           From the plot above, we can visualize that california has the highest number of student acceptances while Mississipi has the lowest. It is worth mentioning that in some students from New York, Georgia, Vermont, Oregon and etc only have one student that applied to college therefore some students were either rejected or waitlisted. <strong>Therefore, we cannot make a definitive statement about whether states affect admission rates, because many states have very few applicants.</strong>
         </p>
@@ -237,13 +244,17 @@
           </div>
         </section>
         <iframe src="./plots/workexp.html" frameborder="0" width="100%" height="450"></iframe>
-        <div style="text-align: center; color: black" ><strong>Figure 5. Student work experience by state and admission decision</strong></div>
+        <div style="text-align: center; color: black" ><strong>Figure 6. Student work experience by state and admission decision</strong></div>
         <p>
           This plot shows how an applicant's work experience and state can influence their admission decision. As seen in the plot, some states such as California have more applicants than other states due to the lack of applicants from certain states. By analyzing the admitted students, we can observe that students from California with 2.86 years of work experience were accepted followed up by Florida whose students had 1.6 years of work expereince, colorado students who had 1.46 years of work experience, and finally Utah students with 1.2 years of worth of experience. For waitlisted students, applicants from Florida with 2.52 years of work experience are waitlisted followed up with students from California and Colorado with nearly 1.88 years of work experience and Utah with 1.37 years of experience.
         </p>
         <p>
           <strong>To conclude, we can't say that a person with more work experience has a higher chance of getting admitted.</strong> Multiple factors are taken before a student gets admitted. For example, a student from Mississippi who has 6.2 years of work experience was rejected but this could be the applicant not satisfying other criterias such as GPA/Test score.
         </p>
+        
+        <iframe src="./plots/scatter.html" frameborder="0" width="100%" height="450"></iframe>
+        <div style="text-align: center; color: black" ><strong>Figure 7. GPA vs. work expereince</strong></div>
+        <p>The trend line shows that there is a slight negative correlation between Work experience and GPA of candidates that got declined. Therefore, the higher the GPA is, the lower is the work experience. To summarize, an applicant who has a higher gpa doesn’t necessarily have a higher chance of acceptance as multiple factors are considered before an applicant is accepted</p>
         
         <br>
         <section id='gender'>
@@ -255,13 +266,13 @@
           </div>
         </section>
         <iframe src="./plots/fig_gender.html" frameborder="0" width="100%" height="450"></iframe>
-        <div style="text-align: center; color: black" ><strong>Figure 6. Count of students for each decision by gender</strong></div>
+        <div style="text-align: center; color: black" ><strong>Figure 8. Count of students for each decision by gender</strong></div>
         <p>
           From the above plot, we see that for every decision category, the number of males (i.e. considering code 1 as male and other as females) is higher. Therefore, we can conclude that overall the applicants pool contained a majority of male students. We can also see that gender 1 is 33% more of the gender 0 in decision categories 'ADMIT' and 'DECLINE' which means that<strong> a gender of a person is not necessary influencing in decision.</strong>
         </p>
         
         <iframe src="./plots/fig_state_gender.html" frameborder="0" width="100%" height="450"></iframe>
-        <div style="text-align: center; color: black" ><strong>Figure 7. Count of students for each state by gender</strong></div>
+        <div style="text-align: center; color: black" ><strong>Figure 9. Count of students for each state by gender</strong></div>
         <p>
           We see the distribituion of gender among different states. Florida leads the count followed by Colorado and California. Most of the other states just had 1 applicant with the exception of Utah and Virginia.
         </p>
@@ -269,6 +280,7 @@
         <br><br>
         <section id="conclusion">
           <h3 class="mb-4" >Conclusion</h3>
+          <p>From the overall analysis, we can conclude that volunteer levels does not have much significance in application decisions. The spread for GPA for students who got declined is wide however, the test-score spread of students who got accepted is towards the higher end which means test score is given preference above GPA. There is a negative correlation between GPA and Work experience and so it is better to encourage students to gain more work experience along with focusing on maintaining GPA and thus the curriculum should maybe be adjusted. We see that mostly several states had just 1 student applying whereas the majority of students application came from Floride, Colorado and California. It is important to diversify the student body andpromote the university by visiting college fairs as well as using social media to advertise. Finally, we see that there is not much difference between the proportions of the students who got declined and the ones who got waitlisted, therefore, the university should consider on accepting more students and reducing their waitlist.</p>
         </section>
         </div>
 		</div>
